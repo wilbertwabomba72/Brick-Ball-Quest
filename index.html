@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brick Ball Quest</title>
+  <meta name="description" content="Brick Ball Quest is a satisfying ball-bouncing brick breaker with 50 offline levels, bonus balls, bomb items, star ratings, music, and sound effects.">
+  <meta name="keywords" content="brick breaker, bounce ball, balls, bricks, puzzle, arcade, offline, aim, levels, bomb, casual">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050915;
+      --panel: rgba(10, 18, 38, 0.82);
+      --line: rgba(98, 205, 255, 0.24);
+      --text: #f7fbff;
+      --muted: #aebbd4;
+      --accent: #52d64a;
+      --blue: #33a4ff;
+      --gold: #ffe25d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(0, 118, 255, 0.32), transparent 32%),
+        radial-gradient(circle at 88% 16%, rgba(142, 42, 255, 0.28), transparent 34%),
+        linear-gradient(180deg, #07142a 0%, var(--bg) 62%, #02040a 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: #8bdcff;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 40px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 1;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .tagline {
+      max-width: 720px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 24px);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.75);
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.08);
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.1;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 26px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.26);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .features li {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 16px;
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+    }
+
+    .features strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #030711;
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.38);
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    footer {
+      padding: 38px 0 56px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      header {
+        padding-top: 48px;
+      }
+
+      .features,
+      .gallery,
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <h1>Brick Ball Quest</h1>
+    <p class="tagline">Aim, launch, bounce, and smash numbered bricks across 50 offline arcade puzzle levels.</p>
+    <div class="actions">
+      <a class="button" href="#screenshots">View Screenshots</a>
+      <a class="button secondary" href="privacy.html">Privacy Policy</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <div class="panel">
+        <h2>A satisfying brick-breaking challenge</h2>
+        <p>Brick Ball Quest is a clean portrait game about finding the perfect angle. Drag to aim, release to launch your balls, and use rebounds to clear numbered bricks before they reach the danger line.</p>
+        <p>Collect bonus balls, trigger bomb items, earn stars, and progress through 50 levels with steadily rising difficulty.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Features</h2>
+      <ul class="features">
+        <li><strong>Simple aiming</strong>Drag and release to send balls bouncing across the board.</li>
+        <li><strong>50 levels</strong>Progressive layouts keep every stage quick and readable.</li>
+        <li><strong>Bomb items</strong>Trigger explosive clears when the board gets crowded.</li>
+        <li><strong>Bonus balls</strong>Grow your shot count and create bigger chain reactions.</li>
+        <li><strong>Star ratings</strong>Replay levels and improve your best move count.</li>
+        <li><strong>Offline play</strong>Enjoy the core game anywhere, with local progress saving.</li>
+      </ul>
+    </section>
+
+    <section id="screenshots" class="wrap">
+      <h2>iPhone Screenshots</h2>
+      <div class="gallery">
+        <figure>
+          <img src="web_assets/screenshots/iphone_gameplay.jpg" alt="Brick Ball Quest iPhone gameplay screenshot" loading="lazy">
+          <figcaption>Plan the angle</figcaption>
+        </figure>
+        <figure>
+          <img src="web_assets/screenshots/iphone_action.jpg" alt="Brick Ball Quest bouncing balls screenshot" loading="lazy">
+          <figcaption>Bounce through bricks</figcaption>
+        </figure>
+        <figure>
+          <img src="web_assets/screenshots/iphone_bombs.jpg" alt="Brick Ball Quest bomb item screenshot" loading="lazy">
+          <figcaption>Trigger bomb clears</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>iPad Screenshots</h2>
+      <div class="gallery">
+        <figure>
+          <img src="web_assets/screenshots/ipad_menu.jpg" alt="Brick Ball Quest iPad main menu screenshot" loading="lazy">
+          <figcaption>Main menu</figcaption>
+        </figure>
+        <figure>
+          <img src="web_assets/screenshots/ipad_gameplay.jpg" alt="Brick Ball Quest iPad gameplay screenshot" loading="lazy">
+          <figcaption>Large board play</figcaption>
+        </figure>
+        <figure>
+          <img src="web_assets/screenshots/ipad_action.jpg" alt="Brick Ball Quest iPad action screenshot" loading="lazy">
+          <figcaption>Arcade physics</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="split">
+        <div class="panel">
+          <h2>Game Details</h2>
+          <p><strong>Genre:</strong> Arcade puzzle brick breaker</p>
+          <p><strong>Mode:</strong> Single-player</p>
+          <p><strong>Progress:</strong> Local level and star saving</p>
+          <p><strong>Audio:</strong> Music and sound effect toggles</p>
+        </div>
+        <div class="panel">
+          <h2>Contact</h2>
+          <p>For support, privacy questions, or business inquiries, contact the developer at <a href="mailto:508923216@qq.com">508923216@qq.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Copyright © 2026 Brick Ball Quest. All rights reserved.</p>
+  </footer>
+</body>
+</html>
